@@ -26,6 +26,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"TileSets","folderPath":"folders/Sprites/TileSets.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"AnimationTileSets","folderPath":"folders/Sprites/AnimationTileSets.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -34,12 +36,19 @@
     "IDEVersion": "2023.8.2.106",
   },
   "resources": [
+    {"id":{"name":"cWater2Tiles","path":"tilesets/cWater2Tiles/cWater2Tiles.yy",},},
+    {"id":{"name":"cFarmTiles","path":"tilesets/cFarmTiles/cFarmTiles.yy",},},
+    {"id":{"name":"Water2Tiles","path":"sprites/Water2Tiles/Water2Tiles.yy",},},
+    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
+    {"id":{"name":"farmTiles","path":"sprites/farmTiles/farmTiles.yy",},},
     {"id":{"name":"Pruba","path":"scripts/Pruba/Pruba.yy",},},
+    {"id":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rLevel1","path":"rooms/rLevel1/rLevel1.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [
