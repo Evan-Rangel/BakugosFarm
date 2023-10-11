@@ -17,12 +17,16 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
     {"name":"TileSets","order":1,"path":"folders/Sprites/TileSets.yy",},
     {"name":"AnimationTileSets","order":2,"path":"folders/Sprites/AnimationTileSets.yy",},
+    {"name":"GrassTiles","order":3,"path":"folders/Sprites/GrassTiles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"cWater2Tiles","order":1,"path":"tilesets/cWater2Tiles/cWater2Tiles.yy",},
     {"name":"cFarmTiles","order":1,"path":"tilesets/cFarmTiles/cFarmTiles.yy",},
+    {"name":"cGrassTiles","order":1,"path":"tilesets/cGrassTiles/cGrassTiles.yy",},
     {"name":"Sprite3","order":17,"path":"sprites/Sprite3/Sprite3.yy",},
+    {"name":"cHouses","order":3,"path":"tilesets/cHouses/cHouses.yy",},
     {"name":"Pruba","order":16,"path":"scripts/Pruba/Pruba.yy",},
     {"name":"rLevel1","order":1,"path":"rooms/rLevel1/rLevel1.yy",},
+    {"name":"Houses","order":2,"path":"sprites/Houses/Houses.yy",},
   ],
 }
