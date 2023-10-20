@@ -15,8 +15,12 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"DialogueSystem","order":17,"path":"folders/DialogueSystem.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"Pruba","order":16,"path":"scripts/Pruba/Pruba.yy",},
+    {"name":"spr_mainfont","order":3,"path":"sprites/spr_mainfont/spr_mainfont.yy",},
+    {"name":"spr_textbox","order":2,"path":"sprites/spr_textbox/spr_textbox.yy",},
+    {"name":"obj_Settings","order":1,"path":"objects/obj_Settings/obj_Settings.yy",},
+    {"name":"obj_textbox","order":4,"path":"objects/obj_textbox/obj_textbox.yy",},
   ],
 }
