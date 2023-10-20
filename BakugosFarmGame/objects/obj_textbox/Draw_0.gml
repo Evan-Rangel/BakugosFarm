@@ -1,10 +1,10 @@
 accept_key = keyboard_check_pressed(vk_space);
 
 textbox_x = camera_get_view_x(view_camera[0]); //Aqui se le indica en donde se va a crear el textbox en la coordenada x, esto lo acomoda en el centro de la camara 0, la suma es el offset.
-textbox_y = camera_get_view_y(view_camera[0] + 144); //Aqui se le indica en donde se va a crear el textbox en la coordenada y, esto lo acomoda en el centro de la camara 0, la suma es el offset.
+textbox_y = camera_get_view_y(view_camera[0]) + 144; //Aqui se le indica en donde se va a crear el textbox en la coordenada y, esto lo acomoda en el centro de la camara 0, la suma es el offset.
 
 
-//SetUp
+//-------SetUp-------//
 if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostrar.
 {
 	setup = true; //Lo hacemos falso luego luego por que quiero que esto ocurra cada frame, ya que se escribira por pagina.
@@ -26,7 +26,7 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 }
 
 
-//Typing the text
+//-------Typing the text-------//
 if (draw_char < text_lenght[page]) //Si hay letras a escribir empezaran a dibujarse una por una.
 {
 	draw_char += text_speed; //Se agrega la velocidad del texto hast aque se llene el tamanio.
@@ -34,7 +34,7 @@ if (draw_char < text_lenght[page]) //Si hay letras a escribir empezaran a dibuja
 }
 
 
-//Flip through pages
+//-------Flip through pages-------//
 if (accept_key) //Si se preciona espacio cambiara de pagina de texto, si el texto continua lo acabara por completo.
 {
 	//Si el texto termino de escribirse
@@ -60,7 +60,15 @@ if (accept_key) //Si se preciona espacio cambiara de pagina de texto, si el text
 }
 
 
-//Draw the textbox
+//-------Draw the textbox-------//
 textbox_img += textbox_speed;
 textbox_spr_w = sprite_get_width(textbox_spr);
 textbox_spr_h = sprite_get_height(textbox_spr);
+//Back of the text box
+draw_sprite_ext(textbox_spr, textbox_img, textbox_x + text_x_offset[page], textbox_y, textbox_width/textbox_spr_w, textbox_height/textbox_spr_h, 0, c_white, 1);
+
+
+//-------Draw the text-------//
+//var _drawtext = string_copy(text[page], 1, round(draw_char));
+var _drawtext = string_copy(text[page], 1, draw_char);
+draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border, _drawtext, line_sep, line_width);
