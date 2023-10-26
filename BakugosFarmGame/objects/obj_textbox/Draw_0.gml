@@ -13,7 +13,6 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 	draw_set_halign(fa_left); //Alineo el texto a la izquierda.
 	
 	//Loop through the pages
-	page_number = array_length(text); //Esto es para saber cuantas veces se va a hacer el loop dependiendo de la cantidad de texto que queda.
 	for (var _p = 0; _p < page_number; _p++)
 	{
 		//Identifica cuantos characteres estan en cada pagina y guarda ese numero en el arreglo de "text_lenght".
@@ -69,6 +68,6 @@ draw_sprite_ext(textbox_spr, textbox_img, textbox_x + text_x_offset[page], textb
 
 
 //-------Draw the text-------//
-//var _drawtext = string_copy(text[page], 1, round(draw_char));
-var _drawtext = string_copy(text[page], 1, draw_char);
+var _drawtext = string_copy(text[page], 1, round(draw_char));
+//var _drawtext = string_copy(text[page], 1, draw_char);
 draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + border, _drawtext, line_sep, line_width);
