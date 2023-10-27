@@ -20,8 +20,10 @@ page = 0; //Esta variable nos ayudara a saber en que pagina del dialogo estamos.
 page_number = 0;
 //Textos prueba//
 text[0] = ""; //Un arreglo de texto para guardar todas las palabras que estaran en la paguina.
-////
 text_lenght[0] = string_length(text[0]); //Guardamos las palabras en un medidor de texto para usarlo, tambien con esto nos aseguramos que no se escriban palabras que no exiten.
+char[0, 0] = "";
+char_x[0, 0] = 0;
+char_y[0, 0] = 0;
 draw_char = 0; //Este determinara cual letra es la que se esta escribiendo.
 text_speed = 1; //Determinara la velocidad en que aparecen las letras.
 
@@ -31,5 +33,11 @@ option[0] = ""; //Guardara las opciones que hay para contestas.
 option_link_id[0] = -1; //Esta permitira saber quien esta dando las opciones.
 option_pos = 0; //Con esto se sabra que decision se selecciono si necesidad del mouse si no con teclas (por ahora oslo teclas).
 option_number = 0; //Esta variable me permite poner limite para que no se salga y quiera seleccionar una opcion vacia o que no existe.
+
+
+//Effects Parameters//
+scr_set_defautlts_for_text(); //La funcion que cree para romper el texto.
+last_free_space = 0; //Para poder saberdonde termina la palabra y hacer espacios.
+
 
 setup = false; //Esta variable determinara si ya se termino el dialogo o no.

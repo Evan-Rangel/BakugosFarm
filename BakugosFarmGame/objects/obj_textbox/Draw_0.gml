@@ -21,6 +21,53 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 		//No Character talking ( center the textbox).
 		text_x_offset[_p] = 44; // Obtiene la posicion en x del textbox para hacer el offset.
 		
+		//Settings individual characters and finding where the lines of text should break
+		for (var _c = 0; _c < text_lenght[_p]; _c++)
+		{
+			var _char_pos = _c + 1;
+			
+			//Store individual character in the "char" array
+			char[_c, _p] = string_char_at(text[_p], _char_pos);
+			
+			//Get current width of the line
+			var _txt_up_to_char = string_copy(text[_p], 1, _char_pos);
+			var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[_c, _p]);
+			
+			//Get the last free space
+			if (char[_c, _p] == " ")
+			{
+				last_free_space = _char_pos + 1;
+			}
+			
+			//Get the line breaks
+			if (_current_txt_w - line_break_offset[_p] > line_width)
+			{
+				line_break_pos[line_break_num[_p], _p] = last_free_space;
+				line_break_num[_p]++;
+				var _txt_up_to_last_space = string_copy(text[_p], 1, last_free_space);
+				var _last_free_space_string = string_char_at(text[_p], last_free_space);
+				line_break_offset[_p] = string_width(_txt_up_to_last_space) - string_width(_last_free_space_string);
+			}
+		}
+		
+		//Getting each characters coordinates
+		for (var _c = 0; _c < text_lenght[_p]; _c++)
+		{
+			var _char_pos = _c + 1;
+			var _txt_x = textbox_x + text_x_offset[_p] + border;
+			var _txt_y = textbox_y + border;
+			
+			//Get current width of the line
+			var _txt_up_to_char = string_copy(text[_p], 1, _char_pos);
+			var _current_txt_w = string_width(_txt_up_to_char) - string_width(char[_c, _p]);
+			var _txt_line = 0;
+			
+			//Compensate for string breaks
+			for (var _lb = 0; _lb < line_break_num[_p]; _lb++)
+			{
+				
+			}
+		}
 	}
 }
 

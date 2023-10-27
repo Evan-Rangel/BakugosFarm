@@ -1,11 +1,20 @@
+/// @param
+function scr_set_defautlts_for_text() //Esta funcion hace mejor los breaks entre palabras para que no supere el tamnio de la textbox
+{
+	line_break_pos[0, page_number] = 999;
+	line_break_num[page_number] = 0;
+	line_break_offset[page_number] = 0;
+}
+
+
 /// @param text
 function scr_text(_text) //Esta funcion facilita crear textos, acomoda los textos en el orden que se escriben, y es facil de llamar en cualquier objeto.
 {
+	scr_set_defautlts_for_text();
 
 	text[page_number] = _text;
 	
 	page_number++;
-
 }
 
 
@@ -13,7 +22,6 @@ function scr_text(_text) //Esta funcion facilita crear textos, acomoda los texto
 /// @param link_id
 function scr_option(_option, _link_id) //Esta funcion sera la encargada de proporcional las opciones y mostrar dialogos dependiendo de ellas.
 {
-	
 	option[option_number] = _option;
 	option_link_id[option_number] = _link_id;
 	
