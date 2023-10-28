@@ -65,8 +65,19 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 			//Compensate for string breaks
 			for (var _lb = 0; _lb < line_break_num[_p]; _lb++)
 			{
-				
+				//If the current looping character is after a line break
+				if (_char_pos >= line_break_pos[_lb, _p])
+				{
+					var _str_copy = string_copy(text[_p], line_break_pos[_lb, _p], _char_pos - line_break_pos[_lb, _p]);
+					_current_txt_w = string_width(_str_copy);
+					
+					//Record the "line" this character should be on
+					_txt_line = _lb + 1; //+1 ya que _lb empieza en 0
+				}
 			}
+			//Add to the X and Y coordinates base on the new info
+			char_x[_c, _p] = _txt_x + _current_txt_w;
+			char_y[_c, _p] = _txt_y + _txt_line*line_sep;
 		}
 	}
 }
@@ -150,6 +161,11 @@ if (draw_char == text_lenght[page] && page == page_number - 1)
 
 
 //-------Draw the text-------//
-var _drawtext = string_copy(text[page], 1, round(draw_char));
-//var _drawtext = string_copy(text[page], 1, draw_char);
-draw_text_ext(_txtb_x + border, _txtb_y + border, _drawtext, line_sep, line_width);
+//var _drawtext = string_copy(text[page], 1, round(draw_char));  //OPTIMIZADO
+//var _drawtext = string_copy(text[page], 1, draw_char);  //OPTIMIZADO
+//draw_text_ext(_txtb_x + border, _txtb_y + border, _drawtext, line_sep, line_width);  //OPTIMIZADO
+for (var _c = 0; _c < draw_char; _c++)
+{
+	//The text
+	draw_text(char_x[_c, page], char_y[_c, page], char[_c, page]);
+}
