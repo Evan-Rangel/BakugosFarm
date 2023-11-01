@@ -141,8 +141,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "DialogueSystem",
-    "path": "folders/DialogueSystem.yy",
+    "name": "Fonts",
+    "path": "folders/DialogueSystem/Sprites/Fonts.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

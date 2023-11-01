@@ -4,15 +4,57 @@ function scr_set_defautlts_for_text() //Esta funcion hace mejor los breaks entre
 	line_break_pos[0, page_number] = 999;
 	line_break_num[page_number] = 0;
 	line_break_offset[page_number] = 0;
+	
+	textbox_spr[page_number] = spr_textbox; //Esta variable es igual a mi sprite de textbox.
+	speaker_sprite[page_number] = noone; 
+	speaker_side[page_number] = 1;
 }
 
 
 /// @param text
+/// @param [Character]
 function scr_text(_text) //Esta funcion facilita crear textos, acomoda los textos en el orden que se escriben, y es facil de llamar en cualquier objeto.
 {
 	scr_set_defautlts_for_text();
 
 	text[page_number] = _text;
+	
+	//Get character Information
+	if (argument_count > 1)
+	{
+		switch(argument[1])
+		{
+			//---Gefeyafa (Protagonista)---//
+			case "Gefeyafa-Normal":
+			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			case "Gefeyafa-Enojado":
+			speaker_sprite[page_number] = spr_gefeyafa_enojado_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			case "Gefeyafa-Incomodo":
+			speaker_sprite[page_number] = spr_gefeyafa_incomodo_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			//-----------------------------//
+			
+			//---Campesina ----------------//
+			case "Campesina-Normal":
+			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			case "Campesina-Enojado":
+			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			case "Campesina-Incomodo":
+			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
+			textbox_spr[page_number] = spr_textbox_red;
+			break;
+			//-----------------------------//
+		}
+	}
 	
 	page_number++;
 }

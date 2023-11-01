@@ -23,11 +23,13 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 		
 		//---Gefe---//
 		case "Gefe":
-			scr_text("Quiero pepsi....");
-			scr_text("o pegarle a mi mama");
-			scr_text("ELDEN RING MI HERMANOOO");
-				scr_option("Deja lo comporo mi hermano", "Gefe - si");
-				scr_option("Pero tenemos examenes", "Gefe - no");			
+			scr_text("...", "Gefeyafa-Normal");
+			scr_text("Quiero pepsi....", "Gefeyafa-Normal");
+			scr_text("Hola humano...");
+			scr_text("Quiero tanto una Pepsi que ya escucho chingaderas.", "Gefeyafa-Incomodo");
+			scr_text("No estas escuchando nada humano, soy real, solo no tengo un cuerpo fisico.");
+			scr_text("Si eres dios largate de aqui cabron, me tienes hasta la verga con la suerte que me das.", "Gefeyafa-Enojado");
+			scr_text("ok :(.");
 		break;
 			case "Gefe - si":
 				scr_text("Date prisa mi hermano ya mero acabo todos los logros");	

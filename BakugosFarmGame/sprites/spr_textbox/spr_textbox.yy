@@ -55,8 +55,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "DialogueSystem",
-    "path": "folders/DialogueSystem.yy",
+    "name": "Textboxs",
+    "path": "folders/DialogueSystem/Sprites/Textboxs.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

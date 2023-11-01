@@ -18,8 +18,22 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 		//Identifica cuantos characteres estan en cada pagina y guarda ese numero en el arreglo de "text_lenght".
 		text_lenght[_p] = string_length(text[_p]); //Esto se pone igual que en el create solo es para darle el vallo "_p".
 		
+		//Character talking on the left
+		text_x_offset [_p] = 80;
+		portrait_x_offset[_p] = 8;
+		
+		//Character talking on the right
+		if (speaker_side[_p] == -1)
+		{
+			text_x_offset[_p] = 8;
+			portrait_x_offset[_p] = 216;
+		}
+		
 		//No Character talking ( center the textbox).
-		text_x_offset[_p] = 44; // Obtiene la posicion en x del textbox para hacer el offset.
+		if (speaker_sprite[_p] == noone)
+		{
+			text_x_offset[_p] = 44; // Obtiene la posicion en x del textbox para hacer el offset.
+		}
 		
 		//Settings individual characters and finding where the lines of text should break
 		for (var _c = 0; _c < text_lenght[_p]; _c++)
@@ -126,10 +140,29 @@ if (accept_key) //Si se preciona espacio cambiara de pagina de texto, si el text
 var _txtb_x = textbox_x + text_x_offset[page];
 var _txtb_y = textbox_y;
 textbox_img += textbox_speed;
-textbox_spr_w = sprite_get_width(textbox_spr);
-textbox_spr_h = sprite_get_height(textbox_spr);
+textbox_spr_w = sprite_get_width(textbox_spr[page]);
+textbox_spr_h = sprite_get_height(textbox_spr[page]);
+//Draw the speaker
+if (speaker_sprite[page] != noone)
+{
+	sprite_index = speaker_sprite[page];
+	if (draw_char == text_lenght[page])
+	{
+		image_index = 0;
+	}
+	var _speaker_x = textbox_x + portrait_x_offset[page];
+	if (speaker_side[page] == -1) 
+	{
+		_speaker_x += sprite_width;	
+	}
+	//Draw the speaker
+	draw_sprite_ext(textbox_spr[page], textbox_img, textbox_x + portrait_x_offset[page], textbox_y, sprite_width/textbox_spr_w, sprite_height/textbox_spr_h, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y, speaker_side[page], 1, 0, c_white, 1);
+}
+
+
 //Back of the text box
-draw_sprite_ext(textbox_spr, textbox_img, _txtb_x, _txtb_y, textbox_width/textbox_spr_w, textbox_height/textbox_spr_h, 0, c_white, 1);
+draw_sprite_ext(textbox_spr[page], textbox_img, _txtb_x, _txtb_y, textbox_width/textbox_spr_w, textbox_height/textbox_spr_h, 0, c_white, 1);
 
 
 //-------Options-------//
@@ -146,7 +179,7 @@ if (draw_char == text_lenght[page] && page == page_number - 1)
 	{
 		//The option box
 		var _o_w = string_width(option[_op]) + _op_bord*2;
-		draw_sprite_ext(textbox_spr,  textbox_img, _txtb_x + 16, _txtb_y - _op_space*option_number + _op_space*_op, _o_w/textbox_spr_w, (_op_space-1)/textbox_spr_h, 0, c_white, 1);
+		draw_sprite_ext(textbox_spr[page],  textbox_img, _txtb_x + 16, _txtb_y - _op_space*option_number + _op_space*_op, _o_w/textbox_spr_w, (_op_space-1)/textbox_spr_h, 0, c_white, 1);
 		
 		//The arrow
 		if (option_pos == _op)
