@@ -26,4 +26,14 @@ if(hInput != 0 or vInput !=0){
 	image_index = 0;
 }
 
+cd --;
+if(cd <- 0 && mouse_check_button(mb_left))
+{
+	cd = cdValue;
+	with(instance_create_layer(x,y, "bullets", obj_bullet))
+	{
+		direction = obj_gun.image_angle;
+		speed = 8;
+	}
+}
 //set sprite
