@@ -26,8 +26,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "Piso_Sprite_1",
-    "path": "sprites/Piso_Sprite_1/Piso_Sprite_1.yy",
+    "name": "Piso_Sprite",
+    "path": "sprites/Piso_Sprite/Piso_Sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,

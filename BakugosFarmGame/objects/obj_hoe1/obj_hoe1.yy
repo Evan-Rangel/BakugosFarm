@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_hoe1_right_1",
-    "path": "sprites/spr_hoe1_right_1/spr_hoe1_right_1.yy",
+    "name": "spr_hoe1_right",
+    "path": "sprites/spr_hoe1_right/spr_hoe1_right.yy",
   },
   "spriteMaskId": null,
   "visible": true,

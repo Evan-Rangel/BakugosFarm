@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_casillas_square_1",
-    "path": "sprites/spr_casillas_square_1/spr_casillas_square_1.yy",
+    "name": "spr_casillas_square",
+    "path": "sprites/spr_casillas_square/spr_casillas_square.yy",
   },
   "spriteMaskId": null,
   "visible": true,

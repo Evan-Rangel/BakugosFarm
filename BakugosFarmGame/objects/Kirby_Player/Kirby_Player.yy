@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Kirby_Walk_Right_1",
-    "path": "sprites/Kirby_Walk_Right_1/Kirby_Walk_Right_1.yy",
+    "name": "Kirby_Walk_Right",
+    "path": "sprites/Kirby_Walk_Right/Kirby_Walk_Right.yy",
   },
   "spriteMaskId": null,
   "visible": true,
