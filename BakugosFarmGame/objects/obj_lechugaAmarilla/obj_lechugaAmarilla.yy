@@ -32,8 +32,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_lechugaAmarilla1_1",
-    "path": "sprites/spr_lechugaAmarilla1_1/spr_lechugaAmarilla1_1.yy",
+    "name": "spr_lechugaAmarilla1",
+    "path": "sprites/spr_lechugaAmarilla1/spr_lechugaAmarilla1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

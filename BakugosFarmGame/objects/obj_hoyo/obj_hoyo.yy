@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_hoyo_1",
-    "path": "sprites/spr_hoyo_1/spr_hoyo_1.yy",
+    "name": "spr_hoyo",
+    "path": "sprites/spr_hoyo/spr_hoyo.yy",
   },
   "spriteMaskId": null,
   "visible": true,
