@@ -2,7 +2,7 @@
 alpha = 0;
 day = 2;
 night = 2;
-color = c_black;
+color = #040273;
 
 alarm[0] = 60;
 
