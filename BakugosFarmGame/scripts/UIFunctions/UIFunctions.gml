@@ -37,7 +37,7 @@ holder_t=noone;
 max_capacity=64;
 resource_info_holder=noone;
 
-
+//comentacion
 function resource_show_info()
 {
 	if(!global.resource_can_move)
