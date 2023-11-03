@@ -7,6 +7,8 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 		//---Evan---//
 		case "Evan":
 			scr_text("Hola wee, soy Evan, solo queria recordarte que estas pendejo jijijijijij");
+				//scr_text_float(14, 17);
+				//scr_text_color(14, 17, c_blue, c_blue, c_white, c_white); 
 			scr_text("sos la hostia.");
 			scr_text("tu codigo esta de la verga :v");		
 			scr_text("Quieres ayuda?");	
@@ -22,7 +24,7 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 		//----------//
 		
 		//---Gefe---//
-		case "Gefe":
+		case "Gefeyafa":
 			scr_text("...", "Gefeyafa-Normal");
 			scr_text("Quiero pepsi....", "Gefeyafa-Normal");
 			scr_text("Hola humano...");
@@ -31,28 +33,20 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 			scr_text("Si eres dios largate de aqui cabron, me tienes hasta la verga con la suerte que me das.", "Gefeyafa-Enojado");
 			scr_text("ok :(.");
 		break;
-			case "Gefe - si":
-				scr_text("Date prisa mi hermano ya mero acabo todos los logros");	
-			break;
-			case "Gefe - no":
-				scr_text("AAAAAAGGGGGGGHHHHHHHHHHHHH");	
-			break;
 		//----------//
 		
-		//---Arturo---//
-		case "Arturo":
-			scr_text("Perdon profe...me quede dormido.");
-			scr_text("aih aih aih");
-			scr_text("ESE WEEEEEEHHH..");
-				scr_option("Mario Wonder cabron", "Arturo - si");
-				scr_option("Levantate temprano cabronnnnn", "Arturo - no");
-		break;
-			case "Arturo - si":
-				scr_text("Pero deja que acabemos los exameness");	
-			break;
-			case "Arturo - no":
-				scr_text("Se me callo una piedra en la cama weeh");	
-			break;
+		//---Campesina---//
+		case "Campesina":
+			scr_text("HOLAAAAA!!!, eres nuevo por aqui?", "Campesina-Normal", -1);
+			scr_text("Ayy no una morra bien ruidosa.", "Gefeyafa-Normal");
+			scr_text("No te entendi como te llamas?!!", "Campesina-Normal", -1);
+			scr_text("...Gefeyafa...", "Gefeyafa-Normal");
+			scr_text("Que..nombre tan raro pero esta bien. Mucho gusto me llam...", "Campesina-Normal", -1);
+			scr_text("Si si, oye campesina sabes donde esta la residencia Prones?", "Gefeyafa-Normal");
+			scr_text("Lucy...Me llamo Lucy.", "Campesina-Incomoda", -1);
+			scr_text("Pero si, si se donde esta la residencia Prone, esta despues del lago, sigueme.", "Campesina-Normal", -1);
+			scr_text("Que hueva, caminar mas, pero va, te sigo.", "Gefeyafa-Normal");
+			scr_text("(Sigues a la morra castrosa)");
 		//----------//
 	}
 

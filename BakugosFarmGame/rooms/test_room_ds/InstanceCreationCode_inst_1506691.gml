@@ -1,1 +1,1 @@
-text_id= "Arturo";
+text_id= "Campesina";

@@ -5,14 +5,61 @@ function scr_set_defautlts_for_text() //Esta funcion hace mejor los breaks entre
 	line_break_num[page_number] = 0;
 	line_break_offset[page_number] = 0;
 	
+	//Variables for every letter/character
+	for (var _j = 0; _j < 500; _j++)
+	{
+		col_1[_j, page_number] = c_white;
+		col_2[_j, page_number] = c_white;
+		col_3[_j, page_number] = c_white;
+		col_4[_j, page_number] = c_white;
+	}
+	
 	textbox_spr[page_number] = spr_textbox; //Esta variable es igual a mi sprite de textbox.
-	speaker_sprite[page_number] = noone; 
-	speaker_side[page_number] = 1;
+	speaker_sprite[page_number] = noone; //Esta variable guarda el sprite que esta hablando, si no se le indica no lo mostrara por default.
+	speaker_side[page_number] = 1; //Esta variable indica de que lado esta hablando el personaje, 1 es izquierda y -1 es derecha.
+	snd[page_number] = snd_random; //Esta variable guarda el sonido que haran al hablar. "audio_sound_pitch(snd[page], random_range(0.8, 1.2));" esa funcion hace una variacion en el tono para que no sea la misma siempre.
 }
+
+
+
+/// @param 1st_char
+/// @param last_char
+/// @param col1
+/// @param col2
+/// @param col3
+/// @param col4
+function scr_text_color(_start, _end, _col1, _col2, _col3, _col4) //Esta funcion sirve para cambiar el color del texto, se llama la funcion despues de la linea que se quiere modificar, le dices el inicio de la palabra y el final, luego el color de cada letra.
+{
+	for (var _c = _start; _c <= _end; _c++)
+	{
+		col_1[_c, page_number - 1] = _col1;
+		col_2[_c, page_number - 1] = _col2;
+		col_3[_c, page_number - 1] = _col3;
+		col_4[_c, page_number - 1] = _col4;
+		
+		float_text[_c, page_number] = 0;
+		float_dir[_c, page_number] = _c*20;
+	}
+}
+
+
+
+
+/// @param 1st_char
+/// @param last_char
+function scr_text_float(_start, _end)
+{
+	for (var _c = _start; _c <= _end; _c++)
+	{
+		float_text[_c, page_number-1] = true;
+	}
+}
+
 
 
 /// @param text
 /// @param [Character]
+/// @param [Side]
 function scr_text(_text) //Esta funcion facilita crear textos, acomoda los textos en el orden que se escriben, y es facil de llamar en cualquier objeto.
 {
 	scr_set_defautlts_for_text();
@@ -28,32 +75,47 @@ function scr_text(_text) //Esta funcion facilita crear textos, acomoda los texto
 			case "Gefeyafa-Normal":
 			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
 			textbox_spr[page_number] = spr_textbox_red;
+			snd[page_number] = snd_boytyping;
 			break;
 			case "Gefeyafa-Enojado":
 			speaker_sprite[page_number] = spr_gefeyafa_enojado_ads;
 			textbox_spr[page_number] = spr_textbox_red;
+			snd[page_number] = snd_boytyping; 
 			break;
 			case "Gefeyafa-Incomodo":
 			speaker_sprite[page_number] = spr_gefeyafa_incomodo_ads;
 			textbox_spr[page_number] = spr_textbox_red;
+			snd[page_number] = snd_boytyping;
 			break;
 			//-----------------------------//
 			
 			//---Campesina ----------------//
 			case "Campesina-Normal":
-			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
-			textbox_spr[page_number] = spr_textbox_red;
+			speaker_sprite[page_number] = spr_campesina_normal_ads;
+			textbox_spr[page_number] = spr_textbox_brown;
+			speaker_side[page_number] = -1;
+			snd[page_number] = snd_girltyping;
 			break;
-			case "Campesina-Enojado":
-			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
-			textbox_spr[page_number] = spr_textbox_red;
+			case "Campesina-Enojada":
+			speaker_sprite[page_number] = spr_campesina_enojada_ads;
+			textbox_spr[page_number] = spr_textbox_brown;
+			speaker_side[page_number] = -1;
+			snd[page_number] = snd_girltyping;
 			break;
-			case "Campesina-Incomodo":
-			speaker_sprite[page_number] = spr_gefeyafa_normal_ads;
-			textbox_spr[page_number] = spr_textbox_red;
+			case "Campesina-Incomoda":
+			speaker_sprite[page_number] = spr_campesina_triste_ads;
+			textbox_spr[page_number] = spr_textbox_brown;
+			speaker_side[page_number] = -1;
+			snd[page_number] = snd_girltyping;
 			break;
 			//-----------------------------//
 		}
+	}
+	
+	//Side the character is on
+	if (argument_count > 2)
+	{
+		speaker_side[page_number] = argument[2];
 	}
 	
 	page_number++;

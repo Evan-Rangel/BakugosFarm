@@ -98,10 +98,40 @@ if (setup == false) //Se hace un chequeo para saber si existe un dialogo a mostr
 
 
 //-------Typing the text-------//
-if (draw_char < text_lenght[page]) //Si hay letras a escribir empezaran a dibujarse una por una.
+if (text_pause_timer <= 0)
 {
-	draw_char += text_speed; //Se agrega la velocidad del texto hast aque se llene el tamanio.
-	draw_char = clamp(draw_char, 0, text_lenght[page]); //Lo clampeo para sin importad la velocidad no de errores, esto lo que hace es darle un minimo y maximo de letras a escribir por frame, dependiendo de la cantidad que existen.
+	if (draw_char < text_lenght[page]) //Si hay letras a escribir empezaran a dibujarse una por una.
+	{
+		draw_char += text_speed; //Se agrega la velocidad del texto hast aque se llene el tamanio.
+		draw_char = clamp(draw_char, 0, text_lenght[page]); //Lo clampeo para sin importad la velocidad no de errores, esto lo que hace es darle un minimo y maximo de letras a escribir por frame, dependiendo de la cantidad que existen.
+		var _check_char = string_char_at(text[page], draw_char);
+		if (_check_char == "." || _check_char == "?" ||  _check_char == ",")
+		{
+			text_pause_timer = text_pause_time;
+			if (!audio_is_playing(snd[page]))
+			{
+				audio_play_sound(snd[page], 8, false);	
+			}			
+		}
+		else
+		{
+			//Typing Sound
+			if (snd_count < snd_delay)
+			{
+				snd_count++;
+			}
+			else 
+			{
+				snd_count = 0;
+				//audio_sound_pitch(snd[page], random_range(0.8, 1.2));
+				audio_play_sound(snd[page], 8, false);				
+			}
+		}
+	}
+}
+else
+{
+	text_pause_timer--;	
 }
 
 
@@ -199,6 +229,16 @@ if (draw_char == text_lenght[page] && page == page_number - 1)
 //draw_text_ext(_txtb_x + border, _txtb_y + border, _drawtext, line_sep, line_width);  //OPTIMIZADO
 for (var _c = 0; _c < draw_char; _c++)
 {
+	//Effects
+	//Floating Text
+	var _float_y = 0;
+	//if (float_text[_c, page] == true)
+	//{
+	//	float_dir[_c, page] += -6;
+	//	_float_y = dsin(float_dir[_c, page])*1;
+	//}
+	
+	
 	//The text
-	draw_text(char_x[_c, page], char_y[_c, page], char[_c, page]);
+	draw_text_color(char_x[_c, page], char_y[_c, page] + _float_y, char[_c, page], col_1[_c, page], col_2[_c, page], col_3[_c, page], col_4[_c, page], 1);
 }

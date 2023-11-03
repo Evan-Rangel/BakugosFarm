@@ -33,9 +33,16 @@ option_pos = 0; //Con esto se sabra que decision se selecciono si necesidad del 
 option_number = 0; //Esta variable me permite poner limite para que no se salga y quiera seleccionar una opcion vacia o que no existe.
 
 
+//Sound Parameters//
+snd_delay = 4;
+snd_count = snd_delay;
+
+
 //Effects Parameters//
 scr_set_defautlts_for_text(); //La funcion que cree para romper el texto.
 last_free_space = 0; //Para poder saberdonde termina la palabra y hacer espacios.
+text_pause_timer = 0;
+text_pause_time = 16;
 
 
 setup = false; //Esta variable determinara si ya se termino el dialogo o no.
