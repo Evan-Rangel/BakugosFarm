@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_shovel1_right_1",
-    "path": "sprites/spr_shovel1_right_1/spr_shovel1_right_1.yy",
+    "name": "spr_shovel1_right",
+    "path": "sprites/spr_shovel1_right/spr_shovel1_right.yy",
   },
   "spriteMaskId": null,
   "visible": true,
