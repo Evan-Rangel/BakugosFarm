@@ -7,8 +7,9 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 		//---Evan---//
 		case "Evan":
 			scr_text("Hola wee, soy Evan, solo queria recordarte que estas pendejo jijijijijij");
-				//scr_text_float(14, 17);
-				//scr_text_color(14, 17, c_blue, c_blue, c_white, c_white); 
+				scr_text_float(14, 17);
+				//scr_text_shake(14, 17);
+				scr_text_color(14, 17, c_red,  c_red,  c_red,  c_red); 
 			scr_text("sos la hostia.");
 			scr_text("tu codigo esta de la verga :v");		
 			scr_text("Quieres ayuda?");	
@@ -41,10 +42,13 @@ function scr_game_text(_text_id) //Esta funcion tomara el nombre id del objeto p
 			scr_text("Ayy no una morra bien ruidosa.", "Gefeyafa-Normal");
 			scr_text("No te entendi como te llamas?!!", "Campesina-Normal", -1);
 			scr_text("...Gefeyafa...", "Gefeyafa-Normal");
+				scr_text_color(3, 10, c_red,  c_red,  c_red,  c_red); 
 			scr_text("Que..nombre tan raro pero esta bien. Mucho gusto me llam...", "Campesina-Normal", -1);
 			scr_text("Si si, oye campesina sabes donde esta la residencia Prones?", "Gefeyafa-Normal");
 			scr_text("Lucy...Me llamo Lucy.", "Campesina-Incomoda", -1);
-			scr_text("Pero si, si se donde esta la residencia Prone, esta despues del lago, sigueme.", "Campesina-Normal", -1);
+				scr_text_shake(0, 3);  scr_text_shake(16, 20);
+				scr_text_color(0, 3, c_olive,  c_olive,  c_olive,  c_olive);  scr_text_color(16, 19, c_olive,  c_olive,  c_olive,  c_olive); 
+			scr_text("Pero si, si se donde esta la residencia Prones, esta despues del lago, sigueme.", "Campesina-Normal", -1);
 			scr_text("Que hueva, caminar mas, pero va, te sigo.", "Gefeyafa-Normal");
 			scr_text("(Sigues a la morra castrosa)");
 		//----------//

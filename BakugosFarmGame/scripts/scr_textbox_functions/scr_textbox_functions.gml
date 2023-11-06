@@ -8,10 +8,20 @@ function scr_set_defautlts_for_text() //Esta funcion hace mejor los breaks entre
 	//Variables for every letter/character
 	for (var _j = 0; _j < 500; _j++)
 	{
+		//Los colores se dividen en 4, si se desea un solo color solo poner todas iguales, si se desea un gradiente hacer convinaciones.
 		col_1[_j, page_number] = c_white;
 		col_2[_j, page_number] = c_white;
 		col_3[_j, page_number] = c_white;
 		col_4[_j, page_number] = c_white;
+		
+		//Letras flotando
+		float_text[_j, page_number] = 0;
+		float_dir[_j, page_number] = _j*20; //El numero por el que se multiplica haria que si es mayor habria mas ondulaciones en las letras.
+		
+		//Letras temblando
+		shake_text[_j, page_number] = 0;
+		shake_dir[_j, page_number] = irandom(360);
+		shake_timer[_j, page_number] = irandom(4);
 	}
 	
 	textbox_spr[page_number] = spr_textbox; //Esta variable es igual a mi sprite de textbox.
@@ -36,12 +46,8 @@ function scr_text_color(_start, _end, _col1, _col2, _col3, _col4) //Esta funcion
 		col_2[_c, page_number - 1] = _col2;
 		col_3[_c, page_number - 1] = _col3;
 		col_4[_c, page_number - 1] = _col4;
-		
-		float_text[_c, page_number] = 0;
-		float_dir[_c, page_number] = _c*20;
 	}
 }
-
 
 
 
@@ -52,6 +58,18 @@ function scr_text_float(_start, _end)
 	for (var _c = _start; _c <= _end; _c++)
 	{
 		float_text[_c, page_number-1] = true;
+	}
+}
+
+
+
+/// @param 1st_char
+/// @param last_char
+function scr_text_shake(_start, _end)
+{
+	for (var _c = _start; _c <= _end; _c++)
+	{
+		shake_text[_c, page_number-1] = true;
 	}
 }
 
