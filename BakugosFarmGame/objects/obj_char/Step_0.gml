@@ -2,6 +2,8 @@
 hInput = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 vInput = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
+
+
 if(hInput != 0 or vInput !=0){
 	dir=point_direction(0,0,hInput,vInput);
 	moveX = lengthdir_x(spd,dir);
@@ -26,6 +28,16 @@ if(hInput != 0 or vInput !=0){
 	image_index = 0;
 }
 
+if (place_meeting(x, y, obj_espada)) {
+    if (mouse_check_button_pressed(mb_left)) {
+        // El objeto de la espada está encima del jugador y se hizo clic izquierdo
+        // Reproduce la animación de ataque
+        sprite_index = spr_ataque; // Reemplaza "spr_ataque" con el nombre de tu sprite de ataque
+        image_speed = 1; // Ajusta la velocidad de la animación según sea necesario
+        // Puedes agregar más lógica aquí según tus necesidades
+    }
+}
+/*
 cd --;
 if(cd <- 0 && mouse_check_button(mb_left))
 {
@@ -37,3 +49,4 @@ if(cd <- 0 && mouse_check_button(mb_left))
 	}
 }
 //set sprite
+*/
