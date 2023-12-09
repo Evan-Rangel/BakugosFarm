@@ -25,6 +25,7 @@
     {"name":"Weapons","order":6,"path":"folders/Sprites/Weapons.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"shaders","order":18,"path":"folders/shaders.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_dl","order":7,"path":"sprites/spr_dl/spr_dl.yy",},
@@ -33,8 +34,10 @@
     {"name":"cFarmTiles","order":1,"path":"tilesets/cFarmTiles/cFarmTiles.yy",},
     {"name":"spr_u","order":4,"path":"sprites/spr_u/spr_u.yy",},
     {"name":"Bullet","order":1,"path":"sprites/Bullet/Bullet.yy",},
+    {"name":"obj_daynight","order":1,"path":"objects/obj_daynight/obj_daynight.yy",},
     {"name":"spr_l","order":6,"path":"sprites/spr_l/spr_l.yy",},
     {"name":"cGrassTiles","order":1,"path":"tilesets/cGrassTiles/cGrassTiles.yy",},
+    {"name":"shader_cycleDay","order":2,"path":"shaders/shader_cycleDay/shader_cycleDay.yy",},
     {"name":"Sprite3","order":17,"path":"sprites/Sprite3/Sprite3.yy",},
     {"name":"cHouses","order":3,"path":"tilesets/cHouses/cHouses.yy",},
     {"name":"spr_ur","order":3,"path":"sprites/spr_ur/spr_ur.yy",},
@@ -46,6 +49,7 @@
     {"name":"spr_ul","order":5,"path":"sprites/spr_ul/spr_ul.yy",},
     {"name":"spr_dr","order":1,"path":"sprites/spr_dr/spr_dr.yy",},
     {"name":"Houses","order":2,"path":"sprites/Houses/Houses.yy",},
+    {"name":"shd_daynight","order":3,"path":"shaders/shd_daynight/shd_daynight.yy",},
     {"name":"obj_bullet","order":1,"path":"objects/obj_bullet/obj_bullet.yy",},
   ],
 }
