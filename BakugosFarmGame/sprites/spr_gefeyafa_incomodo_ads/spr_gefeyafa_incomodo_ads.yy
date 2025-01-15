@@ -13,21 +13,21 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c63c526e-7903-4ed9-a49d-b5d8d58720dc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd524cdc-d1d0-4f3b-98d1-3ebbbbfd4ab7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9d0ce65-9ee9-46c6-8524-7f2f222dbc90",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"22d73f5d-bc05-4497-b405-b6fa274dd650",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e4b7ebff-1114-4da2-bf2b-29dbf084c515","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7d2070c2-1525-42d9-aec3-e20240f00aed","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Protagonista",
-    "path": "folders/DialogueSystem/Sprites/Personajes/Protagonista.yy",
+    "name": "Gefeyafa",
+    "path": "folders/DialogueSystem/Sprites/Personajes/Gefeyafa.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c63c526e-7903-4ed9-a49d-b5d8d58720dc","path":"sprites/spr_gefeyafa_incomodo_ads/spr_gefeyafa_incomodo_ads.yy",},},},"Disabled":false,"id":"f04ae714-324a-4839-b0f0-6eed011e7419","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd524cdc-d1d0-4f3b-98d1-3ebbbbfd4ab7","path":"sprites/spr_gefeyafa_incomodo_ads/spr_gefeyafa_incomodo_ads.yy",},},},"Disabled":false,"id":"ba80589a-7cd7-4cf6-a175-083eeb908cc2","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a9d0ce65-9ee9-46c6-8524-7f2f222dbc90","path":"sprites/spr_gefeyafa_incomodo_ads/spr_gefeyafa_incomodo_ads.yy",},},},"Disabled":false,"id":"c2fca361-e2d5-45fb-a492-6e12b0c108bb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22d73f5d-bc05-4497-b405-b6fa274dd650","path":"sprites/spr_gefeyafa_incomodo_ads/spr_gefeyafa_incomodo_ads.yy",},},},"Disabled":false,"id":"1a341f0c-4cec-4f40-89fc-c8888e33e413","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
